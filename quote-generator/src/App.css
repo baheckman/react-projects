@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  background-color: #222;
+}
+
+.App-logo {
+  animation: App-logo-spin; /* infinite 20s linear; */
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Quote {
+  padding: 20px 100px 20px 100px;
+  margin: 0px 200px 0px 200px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.QuoteText {
+  font-size: 25px;
+  color: white;
+}
+
+.QuoteAuthor {
+  padding: 0px 100px 0px 0px;
+  text-align: right;
+  color: white;
+}
+
+.QuoteButton {
+  border-color: white;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.MoreInfo {
+  display: flex;
+  flex-direction: row;
+  border-color: white;
+}
+
+.AuthorInfo {
+  padding: 0px 100px 0px 100px;
+  margin: 0px 200px 0px;
+  color: white;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+}
+
+.QuoteInfo {
+  text-align: center;
+  padding: 0px 100px 0px 100px;
+  margin: 0px 0px 0px 200px;
+  color: white;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
