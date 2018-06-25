@@ -44,7 +44,7 @@
 .QuoteButton {
   border-color: white;
   border-radius: 5px;
-  background-color: black;
+  background-color: #222;
   color: white;
   font-size: 20px;
 }

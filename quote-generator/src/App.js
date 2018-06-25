@@ -83,46 +83,36 @@ class Quote extends React.Component {
     this.changeQuote = this.changeQuote.bind(this)
   }
 
-  // componentDidMount() {
-  //   fetch(url, {
-  //     mode: 'no-cors' // 'cors' by default
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ 
-  //       author: data.author,
-  //       quote: data.quote
-  //     }));
-  // }
+  componentWillMount() {
+    fetch(url, {
+      method: 'GET',
+      headers:{
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials':true,
+        'Access-Control-Allow-Methods':'GET'
+      }
+    })
+    .then(response => response.json())
+    .then(data => this.setState({
+      quote: data.quote,
+      author: data.author
+    }))
+  }
 
   changeQuote() {
-    // var randNum = Math.floor(Math.random()*quotes.length);
-    // var randQuote = quotes[randNum]['quote'];
-    // var randAuthor = quotes[randNum]['author'];
-    // this.setState({
-    //   quote: randQuote,
-    //   author: randAuthor
-    // });
-    // fetch(url)
-    //   .then(response => response.json())
-    //   .then(data => this.setState({
-    //     quote: data.quote,
-    //     author: data.author 
-    //   })
-    // );
-
     fetch(url, {
-      mode: 'no-cors' // 'cors' by default
-    })
-    .then(function(response) {
-      if (response.status >= 400) {
-        throw new Error("Bad response from server");
+      method: 'GET',
+      headers:{
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials':true,
+        'Access-Control-Allow-Methods':'GET'
       }
-      // return response.json();
-      // console.log(response.json());
     })
-    .then(function(data) {
-      console.log(data)
-    });
+    .then(response => response.json())
+    .then(data => this.setState({
+      quote: data.quote,
+      author: data.author
+    }))
   }
 
   render() {
